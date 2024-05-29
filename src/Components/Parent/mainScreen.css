@@ -1,0 +1,246 @@
+  
+  /* .App2 {
+    display: flex;
+    margin: -52px 0 0 6px  ;
+    position: relative;
+    top: 59px; /* Adjusted margin to increase the size of App */
+  /* } */ 
+  
+  .left-nav {
+    width: 260px;
+    color: #555;
+    padding: 20px;
+    background-color: #ebecf4;
+    border-radius: 10px; /* Adding border-radius for rounded corners */
+
+  }
+  
+
+  
+  .main-contentteacher {
+    padding: 54px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: 50px;
+    
+  }
+  
+  .right-sidebar {
+    width: 30%; /* Adjusted width for right-sidebar */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    position: fixed;
+    top: 50;
+    right: 0;
+    height: 100%;
+    overflow-y: auto;
+    
+  }
+  
+  /* Additional styles */
+
+  
+
+  .left-nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .left-nav li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .left-nav i {
+    margin-right: 10px;
+  }
+  
+  .left-nav li:hover {
+    /* color: white; */
+    background-color: #F3F2F5;
+  }
+ 
+  .left-nav button{
+    margin:0 0 0 0;
+    height: 94px;
+    width: 176px;
+}
+
+  .left-nav button  a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .welcome-msg {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    
+    padding: 50px;
+    border-radius: 5px;
+  }
+  
+  .Welcomebox {
+    color: #333;
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .submitted-tests {
+    background-color: #fff;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 0%;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid #ddd;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .calendar,
+  .timeline {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .calendar table,
+  .timeline ul {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .calendar th,
+  .calendar td,
+  .timeline li {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .class-box {
+    position: relative;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  
+  .class-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .class-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+  }
+  
+  .class-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .class-dropdown li {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .class-btn:hover + .class-dropdown,
+  .class-dropdown:hover {
+    display: block;
+  }
+  
+/* Media Queries */ 
+@media only screen and (max-width: 768px) {
+  .App2 {
+    flex-direction: column;
+  }
+
+  .left-nav,
+  .main-content,
+  .right-sidebar {
+    width: auto;
+  }
+
+  .right-sidebar {
+    display: none; /* Hide the right-sidebar */
+  }
+}
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  margin: 0 0 0 0;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .left-nav {
+    display: none;
+    position: fixed;
+    width: 270px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #2c3e50;
+    padding: 20px;
+    z-index: 999;
+    transition: all 0.3s ease;
+    border:10px bold  #2c3e50 ;
+  }
+
+  .left-nav.show {
+    margin: 0 0 0 0;
+    display: block;
+    background-color:rgba(255,255,255,0.5) ;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+  .left-nav button{
+    width:240px;
+  }
+}

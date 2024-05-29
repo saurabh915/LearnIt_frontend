@@ -1,0 +1,49 @@
+.student-list-page {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .student-list {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .student-list th,
+  .student-list td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  
+  .student-list th {
+    background-color: #ccc;
+    text-align: center;
+  }
+  
+
+  /* Add media queries for responsive design */
+
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for small screens */
+  .student-list-page {
+    padding: 10px;
+  }
+
+  .student-list th,
+  .student-list td {
+    padding: 3px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Further adjustments for smaller screens */
+  .student-list-page {
+    padding: 5px;
+  }
+
+  .student-list th,
+  .student-list td {
+    padding: 2px;
+  }
+}

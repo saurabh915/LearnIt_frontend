@@ -1,0 +1,30 @@
+
+
+
+
+.categoryupload{
+  margin: 94px 0 0 0;
+}
+
+
+
+
+
+
+
+/* * Media Queries */ 
+@media only screen and (max-width: 768px) {
+  .App2 {
+    flex-direction: column;
+  }
+
+  .left-nav,
+  .main-content,
+  .right-sidebar {
+    width: 100%;
+  }
+
+  .right-sidebar {
+    position: static;
+  }
+}

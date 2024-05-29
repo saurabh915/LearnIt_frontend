@@ -1,0 +1,31 @@
+/* Add media query for responsive design */
+@media only screen and (max-width: 768px) {
+    .all-screen {
+      /* Adjust styles for small screens */
+      margin-top: 100px;
+    }
+  
+    .background-container {
+      /* Adjust styles for background container on small screens */
+      background-color: #333; /* Example change of background color */
+    }
+  
+    h2 {
+      /* Adjust heading styles for small screens */
+      color: white;
+    }
+  
+    p {
+      /* Adjust paragraph styles for small screens */
+      font-size: 14px;
+    }
+  
+    button {
+      /* Adjust button styles for small screens */
+      width: 200px;
+      padding: 12px;
+      font-size: 16px;
+    }
+  }
+
+  

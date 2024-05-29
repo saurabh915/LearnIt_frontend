@@ -1,0 +1,13 @@
+/* Default styles for the chart */
+.chart-small {
+    width: 300px;
+    height: 200px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .chart-small {
+        width: 100%; /* Make the chart full width on smaller screens */
+        height: auto; /* Allow the height to adjust automatically */
+    }
+}

@@ -1,0 +1,105 @@
+/* notice.css */
+
+/* Add general styles here */
+
+  /* background-image:url("https://i.pinimg.com/600x315/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg") ; */
+  
+
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f4f4;
+  background-image:url("https://i.pinimg.com/600x315/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg") ;
+
+  }
+  
+  .left {
+    width: 100%; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left > div {
+    border: solid black 2px;
+    border-radius: 20px;
+    display: flex;
+    width: 100%; /* Adjust as needed */
+    height: 600px; /* Adjust as needed */
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+  
+  .left > div > div {
+    width: 80%;
+    text-align: center;
+  }
+  
+  .inside1{
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .inside1 textarea {
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 80px 0 0 86;
+    border: 2px solid burlywood;
+  }
+  .left input,
+  .left textarea {
+    width: 100%;
+    margin:0 0 0 0 ;
+    padding: 5px 0 0 0;
+  }
+  
+  .rights {
+    margin: 0 0 0 0;
+    width: 100%; /* Adjust as needed */
+    border-left: 1px solid #ccc;
+    padding: 20px 10px 0 20px ;
+    box-sizing: border-box;
+    background-size: cover;
+    overflow: auto;
+  }
+  
+  .rights h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .rights > div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  
+  /* Media Query */
+  @media only screen and (max-width: 768px) {
+    .chat-container {
+      flex-direction: column;
+    }
+  
+    .left,
+    .rights {
+      width: 100%;
+    }
+  
+    .left > div,
+    .rights {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  
+    .left > div > div {
+      width: 90%; /* Adjust width for smaller screens */
+    }
+  }
+  

@@ -1,0 +1,127 @@
+.form {
+    /* display: flex; */
+    position: relative;
+    align-items: center;
+    margin: 15px;
+    width: 450px;
+    height: 400px;
+    justify-content: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+span {
+    display: float;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    padding: 5px;
+    font-weight: 800;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('https://png.pngtree.com/background/20221128/original/pngtree-torn-ripped-paper-sticked-on-abstract-memphis-background-picture-image_1967329.jpg');
+    background-size: cover;
+}
+
+.login-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 1000;
+}
+
+.form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Add more styling as needed */
+
+
+/* Navbar styling */
+/* .navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+   */
+  /* Login container styling */
+  /* .login-container {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+  }
+   */
+  /* Login heading styling */
+  /* .login-heading {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+   */
+  /* Form styling */
+  /* .form {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+  }
+   */
+  /* Button styling
+  .btn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+   */
+  /* Error message styling */
+  /* .error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+   */

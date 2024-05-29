@@ -1,0 +1,69 @@
+/* GoogleForm.css */
+
+.google-form-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.google-form-box1 {
+  margin: 160px 0 0 -18px;
+  width: 52%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px ;
+  border: 1px solid black;
+}
+.google-form-box2 {
+  margin: 160px -18px 0 8px;
+  width: 52%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px ;
+  border: 1px solid black;
+}
+
+.google-form-box h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.google-form-box p {
+  margin-bottom: 20px;
+}
+
+.google-form-link,
+.google-form-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.google-form-link:hover,
+.google-form-button:hover {
+  color: #fff;
+  background-color: #0056b3;
+}
+
+@media only screen and (max-width: 768px) {
+  .google-form-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .google-form-box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+.google-form-box h2{
+  color: black;
+}

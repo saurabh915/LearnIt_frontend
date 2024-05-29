@@ -1,0 +1,90 @@
+.performance h2{
+  text-align: center;
+}
+
+.Performance{
+  color: rgb(246, 246, 246)!important;
+  background-color: #16165a;
+  z-index: 0;
+  left: 0px;
+  height:730px;
+  overflow: auto;
+}
+/* Default styles for chart containers */
+.chart-content{
+  gap: 65px;
+}
+.chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px; /* Adjust the width as needed */
+  height: 300px; /* Adjust the height as needed */
+  margin: 20px auto; /* Center the chart horizontally */
+  padding: 20px;
+  z-index: 100;
+  background-color: white;
+  
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.linegraphs{   
+   display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* Updated styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .chart-container {
+    width: 90%; /* Make the chart container width 90% of the viewport */
+    height: auto; /* Allow the height to adjust automatically based on content */
+    margin: 20px auto; /* Center the chart horizontally */
+  }
+}
+
+/* Updated styles for the chart content container */
+.chart-content {
+  display: flex;
+  flex-direction: column; /* Updated to column layout */
+  align-items: center; /* Center the entire chart content */
+  text-align: center;
+  margin: 20px auto; /* Center the chart content horizontally */
+  /* color: blue; */
+}
+
+/* Updated styles for the category container */
+.category {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Make the category container width 90% of the viewport */
+  padding: 20px;
+  margin: 20px auto; /* Center the category container horizontally */
+  background-color: #4caf50;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Adjust margin for the "Load Data" button */
+.btn-primary {
+  margin-top: 20px;
+}
+
+/* Optional: Adjust padding for the "Student Categorization" heading */
+.chart-container h1 {
+  padding-bottom: 10px;
+}
+
+/* Optional: Center the "Give Your Next Test" and "Home Page" buttons */
+.foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Additional media queries and styles can be added as needed */

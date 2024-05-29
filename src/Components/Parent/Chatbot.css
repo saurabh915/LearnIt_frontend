@@ -1,0 +1,47 @@
+/* styles.css */
+
+/* Add your existing CSS styles here */
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .App {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    /* Adjust width and max-width of the chat container */
+    .App > div {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 1200px) {
+    /* Adjust styles for larger screens */
+    .App {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Adjust width and max-width of the chat container */
+    .App > div {
+        width: 90%;
+        max-width: 1200px;
+    }
+}

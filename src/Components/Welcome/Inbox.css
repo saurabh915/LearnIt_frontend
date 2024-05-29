@@ -1,0 +1,13 @@
+/* Add this CSS to your stylesheets or Test.css file */
+
+/* Media query for responsive design */
+@media only screen and (max-width: 768px) {
+    .right {
+      width: 100%; /* Adjust width to occupy full width on smaller screens */
+      border-left: none; /* Remove the border on smaller screens */
+      border-top: 1px solid #ccc; /* Add a top border for separation */
+      padding: 10px; /* Reduce padding for better spacing */
+      box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    }
+  }
+  

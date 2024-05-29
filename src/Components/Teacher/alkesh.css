@@ -1,0 +1,284 @@
+/* General Styles */
+*{
+  font-family: sans-serif;
+}
+.App2 {
+  display: flex;
+  /* margin-top: 59px; Adjusted margin to increase the size of App */
+  margin: -12px 0 0 0;
+  padding: 2px 0 0 0 ;
+}
+
+.left-navM {
+  margin: -4px 0 0 -4px ;
+  width: 330px;
+  overflow: auto;
+  height: 100vh;
+  color: #555;
+  padding: 20px;
+  background-color: #ebecf4;
+}
+
+.left-navM h1 {
+  margin: 14px 0 0 0;
+  text-decoration: double;
+  font-size: 48px; /* Reduced font size for better readability */
+  color: red;
+  font-weight: bold;
+}
+
+.left-navM button {
+  margin-left: -10px;
+  height: 100px;
+  width: 220px;
+  color: black;
+  background-color: #ebecf4;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.left-navM ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-navM li {
+  margin-bottom: 10px;
+}
+
+.left-navM li:hover {
+  color: #5cb85c;
+  background-color: #cdc7bb;
+}
+
+.main-contentteacherM {
+  padding: 20px 0 0 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin: -20px 0 0 6px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-msg {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Welcomebox {
+  color: #333;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.submitted-tests {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.submitted-tests table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.submitted-tests th,
+.submitted-tests td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.submitted-tests th {
+  background-color: #f2f2f2;
+}
+
+.submitted-tests tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Table of Students List */
+table tr {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
+
+tbody td a {
+  text-decoration: none;
+  color: green;
+  text-align: center;
+}
+
+.right-sidebar {
+  width: 30%;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  position: fixed;
+  top: 50;
+  right: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Additional Styles */
+.welcome-msg {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.Welcomebox {
+  color: #333;
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.submitted-tests {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  margin-left: 0%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+.calendar,
+.timeline {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.calendar table,
+.timeline ul {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td,
+.timeline li {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.class-box {
+  position: relative;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.class-btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+}
+
+.class-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+}
+
+.class-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.class-dropdown li {
+  padding: 8px;
+  text-align: center;
+}
+
+.class-btn:hover + .class-dropdown,
+.class-dropdown:hover {
+  display: block;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  .App2 {
+    flex-direction: column;
+  }
+
+  .left-navM,
+  .main-content,
+  .right-sidebar {
+    width: auto;
+  }
+
+  .right-sidebar {
+    display: none;
+  }
+
+  .left-navM {
+    display: none;
+    position: fixed;
+    margin: 4px 14px 0 4px;
+    width: 270px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ebecf4;
+    padding: 20px;
+    z-index: 999;
+    transition: all 0.3s ease;
+  }
+
+  .left-navM.show {
+    display: block;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+}

@@ -1,0 +1,59 @@
+/* Base styles */
+.options-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the height of the wrapper to fill the viewport */
+}
+
+.options-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: space-between;
+  max-width: 1000px; /* Increased width by 10% */
+  width: 100%;
+  padding: 0 20px; /* Add padding to the container */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.option-box {
+  flex: 1 1 45%; /* Allow boxes to take up equal space with some flexibility */
+  margin: 0 0 16px 20px; /* Optional margin between boxes */
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.option-box a {
+  text-decoration: none;
+  color: black;
+}
+
+.option-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(194, 42, 42, 0.2);
+}
+
+.option-box h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.option-box p {
+  color: #666;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .option-box {
+    flex-basis: calc(50% - 20px); /* Two boxes per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .option-box {
+    flex-basis: 100%; /* One box per row */
+  }
+}

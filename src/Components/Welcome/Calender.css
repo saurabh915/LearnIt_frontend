@@ -1,0 +1,58 @@
+/* Calender.css */
+
+.fc-event {
+  background-color: #ff0000; /* Change this color to your desired background color */
+}
+
+.calender-container {
+    display: flex;
+    flex-direction: row;
+    /* height: 500px;
+    width: 500px; */
+  }
+  
+  .full-calendar {
+    width: 30%; /* Adjust as needed */
+    margin-right: 20px;
+
+  }
+  
+  .add-event-container {
+    width: 30%; /* Adjust as needed */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .add-event-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .add-event-container label {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .add-event-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .add-event-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-event-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .fc-event-title { 
+     background-color: cyan;
+  }

@@ -1,0 +1,15 @@
+/* Add this CSS to your stylesheets or Instruction.css file */
+
+/* Media query for responsive design */
+@media only screen and (max-width: 768px) {
+    .dynamic {
+      width: 90%; /* Adjust width to occupy more space on smaller screens */
+      margin: 20px; /* Add margin for spacing on smaller screens */
+    }
+  
+    .instructions {
+      margin-left: 0; /* Remove left margin for instructions list */
+      text-align: left; /* Align instructions list to the left on smaller screens */
+    }
+  }
+  
