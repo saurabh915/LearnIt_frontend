@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import "./Test.css"
-import { useNavigate } from 'react-router-dom';
 import Science1 from './Subjects1/Science1/Science1';
 import Math1 from './Subjects1/Math1/Math1';
 import Social1 from './Subjects1/Social1/Social1';
-function Test({live,setCsubject,Csubject,setlive}) {
-  const navigate = useNavigate();
+function Test({setCsubject,Csubject,setlive}) {
+
   const [flag, setflag] = useState(true)
-  function GiveCurrent(params) {
+  function GiveCurrent() {
     console.log("setting flag false");
 
 setflag(false)

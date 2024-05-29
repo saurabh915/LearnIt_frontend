@@ -43,6 +43,7 @@ const Takequiz = ({ quizQuestions }) => {
             console.log(`Quiz finished for ${studentName}`);
             console.log(`Score: ${calculateScore()} out of ${quizQuestions.length}`);
         }
+        // eslint-disable-next-line
     }, [quizFinished, studentName, quizQuestions]);
 
     // Check if quizQuestions is not defined or empty before rendering

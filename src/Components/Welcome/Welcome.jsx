@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getstudentdata } from '../../service/quizapi';
 import Inbox from './Inbox';
-import Subjects from './Test/CurrentTest/Subjects1';
 import Chatbot from '../Parent/Chatbot'
 import Performance from '../Performance/Performance'
 import CalenderForStudent from './CalenderForStudent';
@@ -14,9 +13,7 @@ function Welcome() {
   const navigate = useNavigate();
   const [email, setemail] = useState(localStorage.getItem('email'));
   const [Amarks, setAmarks] = useState([]);
-  const [ctest, setctest] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [inboxv, setInboxv] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [studentInfo, setStudentInfo] = useState({
     name: '',
@@ -31,6 +28,7 @@ const [Content, setContent] = useState("")
     const fetchData = async () => {
       try {
         const email = localStorage.getItem('email');
+        setemail(email)
         const data = await getstudentdata(email);
 
         console.log(data);
@@ -46,12 +44,12 @@ const [Content, setContent] = useState("")
         console.log(hasMaths);
         console.log(hasScience);
         console.log(hasSocial);
-
+        setSidebarOpen(prev=>prev)
+        setStudentInfo(prev=>prev)
         // Check if all three subjects have data
         const newCtest = hasMaths && hasScience && hasSocial;
         console.log('newCtest:', newCtest);
 
-        setctest(newCtest);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -185,7 +183,7 @@ const [Content, setContent] = useState("")
 
 {/* Page Content */}
 
-{view == "profile" ?
+{view === "profile" ?
 <div
 className="this-container"
 style={{
@@ -234,11 +232,12 @@ marginLeft:"30px",
 </div>: null}
 
 
-{view == "inbox" && <Inbox />}
-{view == "chatbox" && <Chatbot />}
-{view == "performance" && <Performance />}
-{view == "calender" && <CalenderForStudent />}
-{view == "content" && <Subjects_Content Content = {Content} setContent={setContent}/>}
+{view === "inbox" && <Inbox />}
+{view === "chatbox" && <Chatbot />}
+{view === "performance" && <Performance />}
+{view === "calender" && <CalenderForStudent />}
+{/* eslint-disable-next-line */}
+{view === "content" && <Subjects_Content Content = {Content} setContent={setContent}/>}
 
 
 

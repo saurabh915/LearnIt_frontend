@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import {  useNavigate } from "react-router-dom";
 import "./mainScreen.css";
 import CalendarForParent from "./CalenderForParent.jsx";
 import "./Chatbot";
@@ -11,7 +11,6 @@ import Profile from "../Teacher/profile";
 import Inbox from "../Welcome/Inbox.jsx";
 import Chatbot from "./Chatbot";
 import Feedback from "./Feedback";
-import CalendarForStudent from "../Welcome/CalenderForStudent.jsx";
 
 
 function Main() {
@@ -19,45 +18,15 @@ function Main() {
 
 
 
-  const [students, setStudents] = useState([]);
-  const [selectedValue, setSelectedValue] = useState({ class_: "8th" });
-  const [isLoading, setIsLoading] = useState(true);
   const [childprofile, setchildprofile] = useState(true);
   const [calender, setcalender] = useState(false);
   const [inbox, setinbox] = useState(false);
-  const [inbox2, setinbox2] = useState(false);
   const [chat, setchat] = useState(false);
-  const [currentQuiz, setcurrentQuiz] = useState(false);
-  const [dynamic, setdynamic] = useState(false);
   const [feedback, setfeedback] = useState(false); // Changed variable name to avoid conflict
-  const [blank, setblank] = useState(false);
-  const [logout, setlogout] = useState(false);
-
-  const [value, setvalue] = useState("")
-  const [status, setStatus] = useState([]);
+ 
   const [showMenu, setShowMenu] = useState(false);
 
 
-  useEffect(() => {
-    const fetchStudentData = async () => {
-      try {
-        const response = await fetch('http://localhost:8000/slist', {
-          method: "POST", headers: {
-            "Content-Type": "application/json",
-          }, body: JSON.stringify({ class_: selectedValue.class_ })
-        });
-        const data = await response.json();
-        setStudents(data.students);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error fetching student data:", error);
-        setStudents([]);
-        setIsLoading(false);
-      }
-    };
-
-    fetchStudentData();
-  }, [selectedValue]);
 
 
   const setsome = (value) => {
@@ -108,6 +77,8 @@ function Main() {
         
           setcalender(true);
           break;
+          default:
+            break;
 
 
     }
@@ -183,49 +154,3 @@ function Main() {
 
 export default Main;
 
-
-{/* <div className="hamburger-menu" onClick={() => setShowMenu(!showMenu)}>
-<div className="bar"></div>
-<div className="bar"></div>
-<div className="bar"></div>
-</div>
-{/* Navigation */}
-{/* <div className={`left-nav ${showMenu ? 'show' : ''}`}>
-<h1>
-Learnit
-</h1>
-<ul>
-  <li>
-    <button>
-      <Link to="/Studentprofile" className="box1">Child Profile</Link>
-    </button>
-  </li>
-
-  <li>
-    <button> Notice
-    </button>
-  </li>
-  <li>
-    <button> <Link to="/Chatbot" className="box1">Chat</Link>
-    </button>
-  </li>
-
-  <li>
-    <button> <Link to="/Attendence" className="box1">Attendance</Link>
-    </button>
-  </li>
-  <li>
-    <button> <Link to="/Feedback" className="box1">Feedback</Link>
-    </button>
-  </li>
-  
-  <li>
-    <button> <Link to="/Calender" className="box1">Calender</Link>
-    </button>
-  </li>
-  <li>
-    <button onClick={()=>{localStorage.removeItem("email"); navigate('/') }}style={{color:"black", fontSize:"21px",fontWeight:"900"}} className="box1" > Logout
-    </button>
-  </li>
-</ul>
-</div>  */}

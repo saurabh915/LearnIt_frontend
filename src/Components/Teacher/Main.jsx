@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./alkesh.css";
-import { type } from "@testing-library/user-event/dist/type";
 import Category from './Category'
 import OptionsComponent from "./Options.jsx"; // Renamed to avoid conflict with state name
 import Makequiz from "./Quiz/Makequiz";
 import MakeDynamic from './Quiz/MakeDynamic'
-import GoogleForm from './Quiz/GoogleForm'
 import Inbox from './notice'
 import Blank from './Blank.jsx'
 import Feedback from "./Feedback.jsx";
 
-import Inbox2 from "./Inbox2.js";
 import CalendarForTeacher from "./CalenderForTeacher.jsx";
 
-const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 function Main() {
   const [students, setStudents] = useState([]);
@@ -23,16 +19,12 @@ function Main() {
   const [home, sethome] = useState(true);
   const [calender, setcalender] = useState(false);
   const [inbox, setinbox] = useState(false);
-  const [inbox2, setinbox2] = useState(false);
   const [category, setcategory] = useState(false);
   const [currentQuiz, setcurrentQuiz] = useState(false);
   const [dynamic, setdynamic] = useState(false);
   const [options, setOptions] = useState(false); // Changed variable name to avoid conflict
   const [blank, setblank] = useState(false);
-  const [logout, setlogout] = useState(false);
 
-  const [value, setvalue] = useState("")
-  const [status, setStatus] = useState([]);
   const [showMenu, setShowMenu] = useState(false);
 const [Feedbacks,setFeedback]=useState(false);
 const navigate = useNavigate();
@@ -69,6 +61,7 @@ const navigate = useNavigate();
   };
 
   const setsome = (value) => {
+    // eslint-disable-next-line
     switch (value) {
       case "home":
         sethome(true);
@@ -78,7 +71,6 @@ const navigate = useNavigate();
         setdynamic(false);
         setOptions(false);
         setblank(false);
-        setinbox2(false)
         setcalender(false)
         setFeedback(false);
         break;
@@ -88,7 +80,6 @@ const navigate = useNavigate();
         setinbox(true);
         setcurrentQuiz(false);
         setdynamic(false);
-        setinbox2(false)
         setOptions(false);
         setblank(false);
         setcalender(false);
@@ -101,7 +92,6 @@ const navigate = useNavigate();
         setinbox(false);
         setcurrentQuiz(false);
         setdynamic(false);
-        setinbox2(false)
         setOptions(false);
         setblank(false);
         setcalender(false);
@@ -114,7 +104,6 @@ const navigate = useNavigate();
         setcurrentQuiz(false);
         setdynamic(false);
         setOptions(true);
-        setinbox2(false)
         setblank(false);
         setcalender(false);
         setFeedback(false);
@@ -126,7 +115,6 @@ const navigate = useNavigate();
           setcurrentQuiz(false);
           setdynamic(false);
           setOptions(false);
-          setinbox2(false)
           setblank(false);
           setcalender(true);
           setFeedback(false)
@@ -139,7 +127,6 @@ const navigate = useNavigate();
             setdynamic(false);
             setOptions(false);
             setblank(false);
-            setinbox2(true);
             setcalender(false);
             setFeedback(false);
             
@@ -153,7 +140,6 @@ const navigate = useNavigate();
               setdynamic(false);
               setOptions(false);
               setblank(false);
-              setinbox2(false);
               setcalender(false);
               setFeedback(true);
               

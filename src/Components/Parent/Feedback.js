@@ -4,8 +4,7 @@ import axios from 'axios';
 
 const Feedback = () => {
   const [showNotification, setShowNotification] = useState(false);
-  const [data, setData] = useState(null);
-  const [dropdownData, setDropdownData] = useState([]);
+
   const [parentData, setParentData] = useState('');
   const [teacherData, setTeacherData] = useState('');
   const [studentData, setStudentData] = useState('');
@@ -13,10 +12,7 @@ const Feedback = () => {
   const [satisfy, setSatisfy] = useState('0');
   const [additionalFeedback, setAdditionalFeedback] = useState('');
 
-  const handleSelectChange = (e) => {
-    const option = e.target.value;
-    setTeacherData(option);
-  };
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -79,18 +75,7 @@ const Feedback = () => {
     }
   };
 
-  const fetchDropdownData = async () => {
-    try {
-      const response = await axios.get('http://localhost:8000/getAllFaculties');
-      console.log(response.data);
 
-      const filterTeacherNames = response.data.map(item => item.name);
-      setDropdownData(filterTeacherNames);
-
-    } catch (error) {
-      console.error('Error fetching dropdown data:', error);
-    }
-  };
 
   const fetchEvents = async () => {
     try {
@@ -107,7 +92,7 @@ const Feedback = () => {
       setParentData(response.data.name);
       setStudentData(response.data.childname);
 
-      fetchDropdownData();
+ 
 
     } catch (e) {
       console.log(e);

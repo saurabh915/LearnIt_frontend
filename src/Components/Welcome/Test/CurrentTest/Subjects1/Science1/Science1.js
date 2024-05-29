@@ -25,6 +25,7 @@ function Science1({Csubject ,setlive,setCsubject}) {
         setlive(true);
         let email = localStorage.getItem("email")
         postcurrentTestR(email, { science: 0 });
+        // eslint-disable-next-line
     }, [])
     
     useLayoutEffect(() => {
@@ -62,7 +63,7 @@ function Science1({Csubject ,setlive,setCsubject}) {
     }
 
     const updateScore = () => {
-        if (clickedOption == Sciencedata1[currentQuestion].correct_answer) {
+        if (clickedOption === Number(Sciencedata1[currentQuestion].correct_answer)) {
             console.log("score updated");
             setScore(score + 1);
         }
@@ -122,10 +123,10 @@ function Science1({Csubject ,setlive,setCsubject}) {
                                     return (
                                         <button
 
-                                            className={`option-btn ${clickedOption == i + 1 ? "checked" : null}`}
+                                            className={`option-btn ${clickedOption === i + 1 ? "checked" : null}`}
                                             key={i}
                                             onClick={() => handleOptionClick(i)}
-                                            style={{ background: clickedOption == i + 1 ? 'lightgreen' : 'white', variant: "contained" }}
+                                            style={{ background: clickedOption === i + 1 ? 'lightgreen' : 'white', variant: "contained" }}
                                         >
                                             {option}
                                         </button>
@@ -139,7 +140,7 @@ function Science1({Csubject ,setlive,setCsubject}) {
                 </div>
                         </>)}
             </div>
-            {/* { !showResult ? <Clock  onChildDataChange={handleChildDataChange} />:null} */}
+            { !showResult ? <Clock  onChildDataChange={handleChildDataChange} />:null}
         </div>
     )
 }

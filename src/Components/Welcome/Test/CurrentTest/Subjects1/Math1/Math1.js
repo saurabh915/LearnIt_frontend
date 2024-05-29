@@ -2,7 +2,6 @@
 //Math1
 import React, { useState, useLayoutEffect, useEffect } from 'react';
 // import Clock from '../../../Clock/Clock';
-import { Mathdata1 } from './Mathdata1';
 import QuizResult from '../QuizResult1';
 import '../Quiz1.css';
 import fetchquiz from '../../../fetchquiz.js';
@@ -21,6 +20,7 @@ function Math1({Csubject , setCsubject,setlive}) {
         setlive(true);
         let email = localStorage.getItem("email")
         postcurrentTestR(email, { maths: 0 });
+        // eslint-disable-next-line
     }, [])
     useLayoutEffect(() => {
         const fetchingquiz = async () => {
@@ -55,7 +55,7 @@ function Math1({Csubject , setCsubject,setlive}) {
     }
 
     const updateScore = () => {
-        if (clickedOption == Mathdata1[currentQuestion].correct_answer) {
+        if (clickedOption === Number(Mathdata1[currentQuestion].correct_answer)) {
             console.log("score updated");
             setScore(score + 1);
         }
@@ -114,10 +114,10 @@ function Math1({Csubject , setCsubject,setlive}) {
                                     return (
                                         <button
 
-                                            className={`option-btn ${clickedOption == i + 1 ? "checked" : null}`}
+                                            className={`option-btn ${clickedOption === i + 1 ? "checked" : null}`}
                                             key={i}
                                             onClick={() => handleOptionClick(i)}
-                                            style={{ background: clickedOption == i + 1 ? 'lightgreen' : 'grey', variant: "contained" }}
+                                            style={{ background: clickedOption === i + 1 ? 'lightgreen' : 'grey', variant: "contained" }}
                                         >
                                             {option}
                                         </button>

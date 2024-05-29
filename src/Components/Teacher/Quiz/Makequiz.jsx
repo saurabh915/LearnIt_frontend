@@ -41,7 +41,7 @@ const Makequiz = () => {
 
     const postCurrentQuiz = async(credentials)=>{
         try {
-            if(questions.length == 10)
+            if(questions.length === 10)
                 
                 {
 

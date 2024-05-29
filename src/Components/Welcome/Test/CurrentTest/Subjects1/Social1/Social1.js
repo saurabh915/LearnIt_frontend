@@ -7,7 +7,6 @@ import QuizResult from '../QuizResult1';
 import '../Quiz1.css';
 import fetchquiz from '../../../fetchquiz.js';
 import { postcurrentTestR } from '../../../../../../service/quizapi';
-import TestReview from '../../../TestReview/TestReview.jsx';
 import Clock from '../../../Clock/Clock.jsx';
 
 function Social1({Csubject ,setlive,setCsubject}) {
@@ -58,7 +57,7 @@ function Social1({Csubject ,setlive,setCsubject}) {
     }
 
     const updateScore = () => {
-        if (clickedOption == Socialdata1[currentQuestion].correct_answer) {
+        if (clickedOption === Number(Socialdata1[currentQuestion].correct_answer) ) {
             console.log("score updated");
             setScore(score + 1);
         }
@@ -125,10 +124,10 @@ function Social1({Csubject ,setlive,setCsubject}) {
                                     return (
                                         <button
 
-                                            className={`option-btn ${clickedOption == i + 1 ? "checked" : null}`}
+                                            className={`option-btn ${clickedOption === i + 1 ? "checked" : null}`}
                                             key={i}
                                             onClick={() => handleOptionClick(i)}
-                                            style={{ background: clickedOption == i + 1 ? 'lightgreen' : 'white', variant: "contained" }}
+                                            style={{ background: clickedOption === i + 1 ? 'lightgreen' : 'white', variant: "contained" }}
                                         >
                                             {option}
                                         </button>

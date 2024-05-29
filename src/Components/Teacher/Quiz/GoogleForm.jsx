@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './GoogleForm.css'; // Import the CSS file
 
 const GoogleForm = () => {
-    const [quizLink, setQuizLink] = useState('');
     const navigate = useNavigate();
     function handlePostQuizLink(params) {
         navigate('/inbox');

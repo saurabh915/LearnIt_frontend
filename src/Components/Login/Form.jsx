@@ -21,12 +21,13 @@ const [pathWithoutSlash, setpathWithoutSlash] = useState(pathWithoutSlash1)
   if (pathWithoutSlash === "studentLogin") {
     setpathWithoutSlash("Student Login") ;
   }
-  else if (pathWithoutSlash == "parentLogin") {
+  else if (pathWithoutSlash === "parentLogin") {
     setpathWithoutSlash("Parent Login");
   }
   else{
     setpathWithoutSlash("Teacher Login")
   }
+  // eslint-disable-next-line
   }, [])
   
 

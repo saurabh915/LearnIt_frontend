@@ -3,7 +3,7 @@
 import React from 'react';
 import Rectanglebox from './Rectanglebox.js';
 
-const Profile = ({ student }) => {
+const Profile = () => {
   // if (!student) {
   //   return <div>No student data available</div>;
   // }

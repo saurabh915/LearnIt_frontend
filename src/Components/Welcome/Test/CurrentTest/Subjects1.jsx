@@ -1,31 +1,25 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, {  useLayoutEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Subjects1.css';
-import { useLocation } from 'react-router-dom';
-import Subjects2 from '../Untaught/Subjects2' 
 import CurrentScreen2 from '../Untaught/CurrentScreen2';
-import Science1 from './Subjects1/Science1/Science1';
-import Math1 from './Subjects1/Math1/Math1';
-import Social1 from './Subjects1/Social1/Social1';
+
 import Test from './Test';
 function Subjects() {
   const [subjects, setSubjects] = useState(["Science", 'Maths', "Social"]);
   const [Usubjects, setUSubjects] = useState([]);
   const [Fsubjects, setFSubjects] = useState([]);
   const [live, setlive] = useState(false);
-  const [dynamic, setDynamic] = useState(true);
   const [Csubject, setCsubject] = useState("");
   const navigate = useNavigate();
-
-  const location = useLocation();
+  // eslint-disable-next-line
   useLayoutEffect(() => {
-
     let email = localStorage.getItem("email");
     // Fetch subjects from your server
     const headers = new Headers({
       'Content-Type': 'application/json', // Example header, replace with your headers
-    
+      
     });
+    setSubjects(prev=>prev)
     
     // Fetch options object with headers
     const requestOptions = {
@@ -62,13 +56,9 @@ function Subjects() {
     navigate(`/${subject.replace(/\s/g, "")}1`);
   };
 
-  const navigatePerformance = () => {
-    navigate('/performance');
-  };
 
-  const navigateProfile = () => {
-    navigate('/welcome');
-  };
+
+
 
   return (
     <> 
