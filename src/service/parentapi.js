@@ -3,7 +3,7 @@ const url = "http://localhost:8000"
 export const plogin = async(credentials)=>{
     try {
 
-        const response = await fetch(`http://localhost:8000/plogin`, {
+        const response = await fetch(`https://learnit-backend-5t1o.onrender.com/plogin`, {
             method: 'POST',
             headers: {
               "Content-Type": "application/json",
