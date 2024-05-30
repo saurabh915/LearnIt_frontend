@@ -8,7 +8,7 @@ const StudentList = () => {
 
   useEffect(() => {
     // Fetch the student data from the API endpoint
-    fetch("http://localhost:8000/studentdata")
+    fetch("https://learnit-backend-5t1o.onrender.com/studentdata")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch student data.");

@@ -33,7 +33,7 @@ const url = "http://localhost:8000"
 export const getstudentdata = async(credentials)=>{
     try {
 console.log("trying to make request");
-        const response = await fetch(`http://localhost:8000/studentdata`, {
+        const response = await fetch(`https://learnit-backend-5t1o.onrender.com/studentdata`, {
             method: 'POST',
             headers: {
               "Content-Type": "application/json",

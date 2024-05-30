@@ -32,7 +32,7 @@ const navigate = useNavigate();
   useEffect(() => {
     const fetchStudentData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/slist', {
+        const response = await fetch('https://learnit-backend-5t1o.onrender.com/slist', {
           method: "POST", headers: {
             "Content-Type": "application/json",
           }, body: JSON.stringify({ class_: selectedValue.class_ })

@@ -22,7 +22,7 @@ function CalendarForStudent() {
   
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/getAllEvents');
+      const response = await axios.get('https://learnit-backend-5t1o.onrender.com/getAllEvents');
       console.log(response.data);
       setEvents(response.data);
     } catch (error) {
@@ -39,7 +39,7 @@ function CalendarForStudent() {
   const giveMeIDByDate = async (dates) => {
     try {
      
-      const response = await axios.get(`http://localhost:8000/getEventIdByDate/${dates}`);
+      const response = await axios.get(`https://learnit-backend-5t1o.onrender.com/getEventIdByDate/${dates}`);
       console.log("check");
       console.log(response.data);
       localStorage.setItem('delToken', response.data.eventId);
@@ -64,7 +64,7 @@ function CalendarForStudent() {
   const handleAddEvent = async () => {
     try {
       if (newEvent.title && newEvent.date) {
-        const response = await axios.post('http://localhost:8000/addEvent', newEvent);
+        const response = await axios.post('https://learnit-backend-5t1o.onrender.com/addEvent', newEvent);
         console.log(response);
         setEvents([...events, { id: response.data.id, ...newEvent }]);//for calender
         setNewEvent({ title: "", date: ""});
@@ -134,7 +134,7 @@ function CalendarForStudent() {
                 const confirmDelete = window.confirm("Are you sure you want to delete this event?");
                 if (confirmDelete) {
                   try {
-                    await axios.delete(`http://localhost:8000/deleteEvent/${eventId}`);
+                    await axios.delete(`https://learnit-backend-5t1o.onrender.com/deleteEvent/${eventId}`);
                     const updatedEvents = events.filter(event => event.id !== eventId);
                     setEvents(updatedEvents);
                     localStorage.removeItem('delToken');
@@ -161,7 +161,7 @@ function CalendarForStudent() {
           const fetchParticularEvent=async(id)=>{
                 
             try {
-              const response = await axios.get(`http://localhost:8000/getEventByID/${id}`);
+              const response = await axios.get(`https://learnit-backend-5t1o.onrender.com/getEventByID/${id}`);
               console.log(response.data);
               response.data.date=JSON.stringify(response.data.date).slice(1,11);
               setEventOpened(response.data);

@@ -40,7 +40,7 @@ const Feedback = () => {
 
 
     try {
-      const response = await axios.post('http://localhost:8000/addFeedback', JSON.stringify(forms), {
+      const response = await axios.post('https://learnit-backend-5t1o.onrender.com/addFeedback', JSON.stringify(forms), {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -80,7 +80,7 @@ const Feedback = () => {
   const fetchEvents = async () => {
     try {
       const loggedParent = localStorage.getItem('email');
-      const response = await axios.post('http://localhost:8000/getChildByParentData', {
+      const response = await axios.post('https://learnit-backend-5t1o.onrender.com/getChildByParentData', {
         email: loggedParent
       }, {
         headers: {

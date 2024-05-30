@@ -14,7 +14,7 @@ const Feedback = () => {
   const callFeedbacksByFilter = async() =>{
 
     try{
-    const response = await axios.get('http://localhost:8000/getFeedbackByFilter');
+    const response = await axios.get('https://learnit-backend-5t1o.onrender.com/getFeedbackByFilter');
     // console.log(response.data);
 
     if(response.data.length > 0)
@@ -82,7 +82,7 @@ const Feedback = () => {
     if(monthValue!== '' && yearValue!== ''){
       console.log(`http://localhost:8000/getFeedbackByFilter?year=${yearValue}&&month?=${monthValue}`);
         try {
-          const response = await axios.get(`http://localhost:8000/getFeedbackByFilter?year=${yearValue}&&month=${monthValue}`);
+          const response = await axios.get(`https://learnit-backend-5t1o.onrender.com/getFeedbackByFilter?year=${yearValue}&&month=${monthValue}`);
          // console.log(response.data);
 
 

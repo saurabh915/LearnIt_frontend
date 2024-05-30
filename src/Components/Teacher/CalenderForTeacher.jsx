@@ -22,7 +22,7 @@ function CalendarForTeacher() {
   
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/getAllEvents');
+      const response = await axios.get('https://learnit-backend-5t1o.onrender.com/getAllEvents');
       console.log(response.data);
       setEvents(response.data);
     } catch (error) {

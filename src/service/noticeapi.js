@@ -2,7 +2,7 @@ const url = "http://localhost:8000"
 export const postNotice = async(notice)=>{
     try {
 
-        const response = await fetch(`http://localhost:8000/addnotice`, {
+        const response = await fetch(`https://learnit-backend-5t1o.onrender.com/addnotice`, {
             method: 'POST',
             headers: {
               "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export const postNotice = async(notice)=>{
 export const fetchnotices = async()=>{
     try {
 
-        const response = await fetch(`http://localhost:8000/getnotices`, {
+        const response = await fetch(`https://learnit-backend-5t1o.onrender.com/getnotices`, {
             method: 'GET',
             headers: {
               "Content-Type": "application/json",
